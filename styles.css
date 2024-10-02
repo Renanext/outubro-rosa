@@ -34,6 +34,9 @@ footer {
     background-color: #e83e8c; /* Cor dos botões */
     color: white; /* Cor do texto do botão */
     border: none; /* Remove a borda padrão */
+    padding: 10px 15px;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -134,4 +137,17 @@ footer {
 
 .scroll-top:hover {
     background-color: rgba(232, 62, 140, 1);
+}
+
+/* Aumenta o tamanho da fonte dos parágrafos para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Tamanho menor em dispositivos móveis */
+    }
+    h2 {
+        font-size: 1.8em; /* Tamanho menor em dispositivos móveis */
+    }
+    p {
+        font-size: 1.1em; /* Ajusta ainda mais o tamanho da fonte em dispositivos móveis */
+    }
 }
