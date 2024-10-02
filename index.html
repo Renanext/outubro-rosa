@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa</title>
+    <link rel="icon" href="icon.png" type="image/jpeg"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- CSS Externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container text-center">
+        <header class="my-4">
+            <h1 class="display-4">Outubro Rosa</h1>
+            <p class="lead">Vamos juntos na luta contra o câncer de mama!</p>
+        </header>
+        
+        <main>
+            <div id="visitCountDisplay" class="my-4"></div>
+            <section class="description my-4">
+                <h2>O que é o Outubro Rosa?</h2>
+                <p>O Outubro Rosa é uma campanha anual de conscientização sobre o câncer de mama. O movimento visa compartilhar informações sobre a doença e promover a importância do diagnóstico precoce, que pode aumentar significativamente as chances de tratamento e cura.</p>
+            </section>
+
+            <section class="objective my-4">
+                <h2>Objetivo do Outubro Rosa</h2>
+                <p>O principal objetivo do Outubro Rosa é alertar as mulheres sobre a importância do autoexame e da mamografia regular, além de encorajar a solidariedade e o apoio às pessoas que estão lutando contra o câncer de mama.</p>
+            </section>
+
+            <section class="more-info my-4">
+                <h2>Mais informações</h2>
+                <p>O câncer de mama é um dos tipos de câncer mais comuns entre as mulheres em todo o mundo. A cada ano, milhões de mulheres são diagnosticadas, mas com o avanço da medicina e a conscientização sobre a doença, as taxas de sobrevivência têm melhorado significativamente. O Outubro Rosa não apenas educa sobre a doença, mas também inspira ação e empatia, promovendo um sentimento de comunidade entre aqueles afetados pelo câncer.</p>
+                <p>Durante todo o mês de outubro, várias instituições de saúde e organizações não governamentais realizam atividades de conscientização, como palestras, caminhadas e eventos de arrecadação, que visam ajudar na luta contra o câncer de mama.</p>
+            </section>
+
+            <section class="video-container">
+                <h2>Assista ao vídeo sobre o Outubro Rosa</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BCptskEYIR8?si=x_x4mvymx_2X1JIl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <section class="testimonials my-4">
+                <h2>Depoimentos</h2>
+                <div class="testimonial">
+                    <p><strong>Maria:</strong> "O diagnóstico precoce salvou minha vida. O Outubro Rosa é muito importante!"</p>
+                </div>
+                <div class="testimonial">
+                    <p><strong>Ana:</strong> "Apoio é fundamental. Juntas, somos mais fortes!"</p>
+                </div>
+            </section>
+
+            <section class="quiz my-4">
+                <h2>Quiz Interativo</h2>
+                <div class="quiz-question">
+                    <p><strong>1. Qual é a principal forma de prevenção do câncer de mama?</strong></p>
+                    <label><input type="radio" name="question1" value="autoexame"> Autoexame mensal</label><br>
+                    <label><input type="radio" name="question1" value="dieta"> Dieta saudável</label><br>
+                    <label><input type="radio" name="question1" value="atividade"> Atividade física</label><br>
+                    <label><input type="radio" name="question1" value="nenhuma"> Nenhuma</label><br>
+                </div>
+                <div class="quiz-question">
+                    <p><strong>2. A mamografia deve ser realizada a partir de qual idade?</strong></p>
+                    <label><input type="radio" name="question2" value="25"> 25 anos</label><br>
+                    <label><input type="radio" name="question2" value="35"> 35 anos</label><br>
+                    <label><input type="radio" name="question2" value="40"> 40 anos</label><br>
+                    <label><input type="radio" name="question2" value="50"> 50 anos</label><br>
+                </div>
+                <button class="btn btn-danger" onclick="checkQuiz()">Enviar Respostas</button>
+                <div class="message" id="quizResult" style="margin-top: 20px;"></div>
+            </section>
+
+            <section class="resources my-4">
+                <h2>Links Úteis</h2>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.inca.gov.br/" target="_blank">Instituto Nacional de Câncer (INCA)</a></li>
+                    <li><a href="https://www.cancer.org.br/" target="_blank">Instituto Brasileiro de Controle do Câncer</a></li>
+                    <li><a href="https://www.campanhaoutubrorosa.com.br/" target="_blank">Campanha Outubro Rosa</a></li>
+                </ul>
+                <h2>Contato</h2>
+                <p>Se você tiver dúvidas ou precisar de apoio, entre em contato pelo telefone: <strong>0800 773 1666.</strong></p>
+            </section>
+
+            <section class="feedback my-4">
+                <h2>Deixe seu feedback</h2>
+                <textarea id="feedbackInput" rows="4" placeholder="Seu feedback aqui..."></textarea><br>
+                <button class="btn btn-danger" onclick="submitFeedback()">Enviar</button>
+                <div class="message" id="feedbackMessage"></div>
+            </section>
+
+            <section class="buttons my-4">
+                <button class="btn btn-danger" onclick="showMessage('A prevenção é o melhor caminho!')">❤️ Prevenção</button>
+                <button class="btn btn-danger" onclick="showMessage('Faça seu exame regularmente!')">🩺 Exames</button>
+                <button class="btn btn-danger" onclick="showMessage('Apoie quem luta contra o câncer!')">🤝 Apoio</button>
+                <button class="btn btn-danger" onclick="showMessage('Juntas somos mais fortes!')">💪 Força</button>
+            </section>
+
+            <div class="message" id="messageArea"></div>
+        </main>
+
+        <footer class="my-4">
+            <p>&copy; 2024 Outubro Rosa</p>
+        </footer>
+   
+        <section>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">
+                <i class="fas fa-adjust"></i> <!-- Ícone de alternar -->
+            </button>
+        </section>
+        
+        <button class="scroll-top" onclick="scrollToTop()" title="Voltar ao topo">
+            ↑
+        </button>
+        
+    <script src="script.js"></script> <!-- JavaScript Externo -->
+    
+</body>
+</html>

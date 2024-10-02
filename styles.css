@@ -1,0 +1,137 @@
+body {
+    background-color: #f8d7e8;
+    color: #333;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #e83e8c, #d63384);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #e83e8c;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.btn {
+    background-color: #e83e8c; /* Cor dos botões */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+}
+
+.btn:hover {
+    background-color: #d63384; /* Cor do botão ao passar o mouse */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e83e8c;
+}
+
+.my-4 {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.video-container, .gallery, .testimonials, .quiz, .resources, .feedback {
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.testimonial {
+    border: 1px solid #e83e8c;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-theme .testimonial {
+    border: 1px solid #fff;
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.quiz-question {
+    margin-top: 20px;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme h2, .dark-theme p {
+    color: #fff;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos do botão de alternar tema */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(232, 62, 140, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(232, 62, 140, 1);
+}
+
+/* Estilos do botão de rolar para o topo */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(232, 62, 140, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: none; /* Inicialmente escondido */
+}
+
+.scroll-top:hover {
+    background-color: rgba(232, 62, 140, 1);
+}
